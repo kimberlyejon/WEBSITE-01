@@ -1,6 +1,7 @@
 
 h1{
     color: #5a0606;
+    
 
 }
 h2{
@@ -18,9 +19,14 @@ body{
 }
 #nav_a_style{
     font-size: 22px;
-    color: #F6B0BB;
+    color: #CD7C86;
     text-decoration: none;
     font-weight: bold;
+}
+
+#nav_style {
+    vertical-align: center;
+    margin-left: 110px;
 }
 #ul_style{
     padding: 32px;
@@ -36,7 +42,7 @@ body{
 }
 #ul_style a:hover {
     color: #5a0606;
-    background-color: #F6B0BB;
+    background-color: pink;
 
 }
 #nav_style{
@@ -147,6 +153,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 #my_years_links_container a{
@@ -260,7 +267,7 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
     border-radius: 32px;
     width: auto;
-    height: 300px;
+    height: 280px;
     display: block;
     object-fit: cover;
     aspect-ratio: 1;
@@ -294,16 +301,32 @@ body{
     visibility: visible;
 }
 
-#likes_pic_container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    align-items: center;
-    flex-direction: row;
-    gap: 30px;
+#likes_pic_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Create 3 equal columns */
+    gap: 30px;  /* Space between items */
+    justify-items: center; /* Center items horizontally */
+    vertical-align: center;
+    margin-top: 60px;
 }
+
+
+.picture-container {
+    display: flex;
+    flex-direction: column; /* Align image, title, and audio in a column */
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin-left: 10px;
+    padding-left: -60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 .picture-container img {
     border-radius: 32px;
+    display: flex;
+    justify-content: center;
     width: auto;
     height: 200px;
     display: block;
@@ -313,7 +336,27 @@ body{
     animation-name: rotate;
     animation-duration: 10s;
     animation-delay: 0s;
+
 }
+
+.picture-container img {
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.picture-container p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #5a0606;
+}
+
+.picture-container audio {
+    margin-top: 10px;
+}
+
+
 @keyframes rotate {
    0%{transform: rotate(0deg);}
    25%{transform: rotate(90deg);}
@@ -339,9 +382,14 @@ body{
     object-fit: cover;
     aspect-ratio: 1;
     gap: 30px;
+    margin-left: 120px;
 }
 
 .films-container {
     width: 100px;
     height: 225px;
+}
+
+.container3 {
+    margin-left: 70px;
 }
